@@ -25,10 +25,7 @@ function CardGrid() {
       { id: 107, image: "panda1.jpg", cardState: "" },
     ].sort(() => Math.random() - 0.5)
   );
-  // const imageGrid = [...images, ...images].sort(() => Math.random() - 0.5) -> does not work, creates undefined half way thru grid
 
-  // In order to re-render the page and element w/ update without needing a page refresh, use setState
-  // https://stackoverflow.com/questions/51426496/why-we-cant-change-states-in-react-without-calling-setstate
   function checkIfCorrect(currentCard) {
     if (images[latestItem].id === images[currentCard].id) {
       images[latestItem].cardState = "matched";
@@ -101,7 +98,7 @@ function CardGrid() {
       <div className="game-area">
         {images.map((image, index) => (
           <Card
-            key={index} // W/o key, program fails to run properly
+            key={index}
             image={image}
             index={index}
             onClickCheck={onClickCheck}
