@@ -2,7 +2,7 @@ import { useState } from "react";
 import Card from "./Card";
 
 function CardGrid() {
-  let complete = 0;
+  const [complete, setComplete] = useState(1);
   const [turns, setTurns] = useState(0);
   const [latestItem, setLatestItem] = useState(-999); // id needs to be < 0 as our image indexs in the grid are 0 -> 15
   const [images, setImages] = useState(
@@ -25,7 +25,7 @@ function CardGrid() {
       { id: 107, image: "panda1.jpg", cardState: "" },
     ].sort(() => Math.random() - 0.5)
   );
-  // does not work, creates undefined half way thru grid -> const imageGrid = [...images, ...images].sort(() => Math.random() - 0.5);
+  // const imageGrid = [...images, ...images].sort(() => Math.random() - 0.5) -> does not work, creates undefined half way thru grid
 
   // In order to re-render the page and element w/ update without needing a page refresh, use setState
   // https://stackoverflow.com/questions/51426496/why-we-cant-change-states-in-react-without-calling-setstate
@@ -33,13 +33,13 @@ function CardGrid() {
     if (images[latestItem].id === images[currentCard].id) {
       images[latestItem].cardState = "matched";
       images[currentCard].cardState = "matched";
-      // complete = complete + 1;
       setImages([...images]);
       setLatestItem(-999);
       setTurns(turns + 1);
-      // console.log(complete);
+      setComplete(complete + 1);
+      console.log(complete);
       if (complete === 8){
-        setTurns(turns + "complete!");
+        alert("The grid is complete!");
       }
     } else {
       images[currentCard].cardState = "incorrectpair";

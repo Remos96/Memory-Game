@@ -8,7 +8,7 @@ function newGame() {
 function App() {
   return (
     <div className="App">
-      <h1>he</h1>
+      <h1> Memory Game </h1>
       <button onClick={newGame}> New Game </button>
       <CardGrid />
     </div>
