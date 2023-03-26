@@ -38,7 +38,7 @@ function CardGrid() {
       setTurns(turns + 1);
       setComplete(complete + 1);
       console.log(complete);
-      if (complete === 8){
+      if (complete === 8) {
         alert("The grid is complete!");
       }
     } else {
@@ -67,17 +67,48 @@ function CardGrid() {
     }
   }
 
+  function newGrid() {
+    setImages(
+      [
+        { id: 100, image: "bear1.jpg", cardState: "" },
+        { id: 100, image: "bear1.jpg", cardState: "" },
+        { id: 101, image: "cat1.jpg", cardState: "" },
+        { id: 101, image: "cat1.jpg", cardState: "" },
+        { id: 102, image: "cat2.jpg", cardState: "" },
+        { id: 102, image: "cat2.jpg", cardState: "" },
+        { id: 103, image: "chicken1.jpg", cardState: "" },
+        { id: 103, image: "chicken1.jpg", cardState: "" },
+        { id: 104, image: "dino1.jpg", cardState: "" },
+        { id: 104, image: "dino1.jpg", cardState: "" },
+        { id: 105, image: "fox1.jpg", cardState: "" },
+        { id: 105, image: "fox1.jpg", cardState: "" },
+        { id: 106, image: "fox2.jpg", cardState: "" },
+        { id: 106, image: "fox2.jpg", cardState: "" },
+        { id: 107, image: "panda1.jpg", cardState: "" },
+        { id: 107, image: "panda1.jpg", cardState: "" },
+      ].sort(() => Math.random() - 0.5)
+    );
+    setTurns(0);
+    setComplete(0);
+    setLatestItem(-999);
+  }
+
   return (
-    <div className="game-area">
-      {images.map((image, index) => (
-        <Card
-          key={index} // W/o key, program fails to run properly
-          image={image}
-          index={index}
-          onClickCheck={onClickCheck}
-        />
-      ))}
-      <div className="Turn">Total Turns: {turns}</div>
+    <div>
+      <div className="NewGameButton">
+        <button onClick={newGrid}> New Game </button>
+      </div>
+      <div className="game-area">
+        {images.map((image, index) => (
+          <Card
+            key={index} // W/o key, program fails to run properly
+            image={image}
+            index={index}
+            onClickCheck={onClickCheck}
+          />
+        ))}
+        <div className="Turn">Total Turns: {turns}</div>
+      </div>
     </div>
   );
 }
