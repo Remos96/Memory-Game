@@ -7,6 +7,10 @@ body {
   justify-content: center;
 }
 
+.NewGameButton{
+  margin-bottom: 10px;
+}
+
 .game-area {
   height: 800px;
   width: 800px;
@@ -14,8 +18,8 @@ body {
   grid-template-columns: auto auto auto auto;
   grid-template-rows: auto auto auto auto;
   gap: 10px;
-  /* outline: rgb(247, 0, 0) solid; */
   border-radius: 3px;
+  justify-content: center;
 }
 
 .card {
@@ -28,7 +32,7 @@ body {
 .card img {
   border-radius: 10px;
   transform: scale(1);
-  opacity: (1);
+
 }
 
 .cardchecking img {
@@ -49,6 +53,7 @@ body {
 
 .cardmatched img:hover {
   opacity: 1;
-
   border-radius: 10px;
 }
+
+
