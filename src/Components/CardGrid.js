@@ -1,30 +1,36 @@
 import { useState } from "react";
 import Card from "./Card";
+import Bear1 from "../assets/bear1.jpg";
+import Cat1 from "../assets/cat1.jpg";
+import Cat2 from "../assets/cat2.jpg";
+import Chicken1 from "../assets/chicken1.jpg";
+import Dino1 from "../assets/dino1.jpg";
+import Fox1 from "../assets/fox1.jpg";
+import Fox2 from "../assets/fox2.jpg";
+import Panda1 from "../assets/panda1.jpg";
 
 function CardGrid() {
   const [complete, setComplete] = useState(1);
   const [turns, setTurns] = useState(0);
   const [latestItem, setLatestItem] = useState(-999); // id needs to be < 0 as our image indexs in the grid are 0 -> 15
-  const [images, setImages] = useState(
-    [
-      { id: 100, image: "bear1.jpg", cardState: "" },
-      { id: 100, image: "bear1.jpg", cardState: "" },
-      { id: 101, image: "cat1.jpg", cardState: "" },
-      { id: 101, image: "cat1.jpg", cardState: "" },
-      { id: 102, image: "cat2.jpg", cardState: "" },
-      { id: 102, image: "cat2.jpg", cardState: "" },
-      { id: 103, image: "chicken1.jpg", cardState: "" },
-      { id: 103, image: "chicken1.jpg", cardState: "" },
-      { id: 104, image: "dino1.jpg", cardState: "" },
-      { id: 104, image: "dino1.jpg", cardState: "" },
-      { id: 105, image: "fox1.jpg", cardState: "" },
-      { id: 105, image: "fox1.jpg", cardState: "" },
-      { id: 106, image: "fox2.jpg", cardState: "" },
-      { id: 106, image: "fox2.jpg", cardState: "" },
-      { id: 107, image: "panda1.jpg", cardState: "" },
-      { id: 107, image: "panda1.jpg", cardState: "" },
-    ].sort(() => Math.random() - 0.5)
-  );
+  const [images, setImages] = useState([
+    { id: 100, image: Bear1, cardState: "" },
+    { id: 100, image: Bear1, cardState: "" },
+    { id: 101, image: Cat1, cardState: "" },
+    { id: 101, image: Cat1, cardState: "" },
+    { id: 102, image: Cat2, cardState: "" },
+    { id: 102, image: Cat2, cardState: "" },
+    { id: 103, image: Chicken1, cardState: "" },
+    { id: 103, image: Chicken1, cardState: "" },
+    { id: 104, image: Dino1, cardState: "" },
+    { id: 104, image: Dino1, cardState: "" },
+    { id: 105, image: Fox1, cardState: "" },
+    { id: 105, image: Fox1, cardState: "" },
+    { id: 106, image: Fox2, cardState: "" },
+    { id: 106, image: Fox2, cardState: "" },
+    { id: 107, image: Panda1, cardState: "" },
+    { id: 107, image: Panda1, cardState: "" },
+  ].sort(() => Math.random() - 0.5));
 
   function checkIfCorrect(currentCard) {
     if (images[latestItem].id === images[currentCard].id) {
@@ -65,26 +71,24 @@ function CardGrid() {
   }
 
   function newGrid() {
-    setImages(
-      [
-        { id: 100, image: "bear1.jpg", cardState: "" },
-        { id: 100, image: "bear1.jpg", cardState: "" },
-        { id: 101, image: "cat1.jpg", cardState: "" },
-        { id: 101, image: "cat1.jpg", cardState: "" },
-        { id: 102, image: "cat2.jpg", cardState: "" },
-        { id: 102, image: "cat2.jpg", cardState: "" },
-        { id: 103, image: "chicken1.jpg", cardState: "" },
-        { id: 103, image: "chicken1.jpg", cardState: "" },
-        { id: 104, image: "dino1.jpg", cardState: "" },
-        { id: 104, image: "dino1.jpg", cardState: "" },
-        { id: 105, image: "fox1.jpg", cardState: "" },
-        { id: 105, image: "fox1.jpg", cardState: "" },
-        { id: 106, image: "fox2.jpg", cardState: "" },
-        { id: 106, image: "fox2.jpg", cardState: "" },
-        { id: 107, image: "panda1.jpg", cardState: "" },
-        { id: 107, image: "panda1.jpg", cardState: "" },
-      ].sort(() => Math.random() - 0.5)
-    );
+    setImages([
+      { id: 100, image: Bear1, cardState: "" },
+      { id: 100, image: Bear1, cardState: "" },
+      { id: 101, image: Cat1, cardState: "" },
+      { id: 101, image: Cat1, cardState: "" },
+      { id: 102, image: Cat2, cardState: "" },
+      { id: 102, image: Cat2, cardState: "" },
+      { id: 103, image: Chicken1, cardState: "" },
+      { id: 103, image: Chicken1, cardState: "" },
+      { id: 104, image: Dino1, cardState: "" },
+      { id: 104, image: Dino1, cardState: "" },
+      { id: 105, image: Fox1, cardState: "" },
+      { id: 105, image: Fox1, cardState: "" },
+      { id: 106, image: Fox2, cardState: "" },
+      { id: 106, image: Fox2, cardState: "" },
+      { id: 107, image: Panda1, cardState: "" },
+      { id: 107, image: Panda1, cardState: "" },
+    ].sort(() => Math.random() - 0.5));
     setTurns(0);
     setComplete(0);
     setLatestItem(-999);

@@ -31,7 +31,7 @@ body {
 
 .card img {
   border-radius: 10px;
-  transform: scale(1);
+  transform: scale(0);
 }
 
 .cardchecking img {
