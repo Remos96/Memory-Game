@@ -1,13 +1,21 @@
 {
   "files": {
-    "main.css": "/Memory-Game/static/css/main.ef979f3e.css",
-    "main.js": "/Memory-Game/static/js/main.6dd7da0a.js",
+    "main.css": "/Memory-Game/static/css/main.1064d681.css",
+    "main.js": "/Memory-Game/static/js/main.a4528cba.js",
+    "static/media/fox2.jpg": "/Memory-Game/static/media/fox2.c9a83fe7c3018ba06fc2.jpg",
+    "static/media/fox1.jpg": "/Memory-Game/static/media/fox1.fd71f08a71c66129afcb.jpg",
+    "static/media/chicken1.jpg": "/Memory-Game/static/media/chicken1.f7a755b709a4e070cf2f.jpg",
+    "static/media/dino1.jpg": "/Memory-Game/static/media/dino1.c5f815dc5181d3a60f72.jpg",
+    "static/media/panda1.jpg": "/Memory-Game/static/media/panda1.d93e2b90367e85d8ed7a.jpg",
+    "static/media/bear1.jpg": "/Memory-Game/static/media/bear1.33469dea1165684001cb.jpg",
+    "static/media/cat1.jpg": "/Memory-Game/static/media/cat1.346f9b7f38825976ce18.jpg",
+    "static/media/cat2.jpg": "/Memory-Game/static/media/cat2.c260e409898003038111.jpg",
     "index.html": "/Memory-Game/index.html",
-    "main.ef979f3e.css.map": "/Memory-Game/static/css/main.ef979f3e.css.map",
-    "main.6dd7da0a.js.map": "/Memory-Game/static/js/main.6dd7da0a.js.map"
+    "main.1064d681.css.map": "/Memory-Game/static/css/main.1064d681.css.map",
+    "main.a4528cba.js.map": "/Memory-Game/static/js/main.a4528cba.js.map"
   },
   "entrypoints": [
-    "static/css/main.ef979f3e.css",
-    "static/js/main.6dd7da0a.js"
+    "static/css/main.1064d681.css",
+    "static/js/main.a4528cba.js"
   ]
 }
